@@ -1,0 +1,24 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+{% include "includes/header.twig" %}
+
+<!-- Default Container -->
+<div class="bk-pt-default">
+
+        <!-- Page Content -->
+        <section class="template-content container">
+
+            <!-- Main Widet Zone -->
+            {{zone('main')|raw}}
+
+        </section>
+        <!-- End Page Content -->
+
+</div>
+<!-- End Default Container -->
+
+{% include "includes/footer.twig" %}
+
+{% endblock %}

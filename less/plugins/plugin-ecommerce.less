@@ -1,0 +1,411 @@
+// ------------------------------------------
+// Unite: CSS > Plugin: Ecommerce
+// ------------------------------------------
+
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+// 1. #SINGLE PRODUCT
+// 2. #PRODUCT LIST
+// 3. #BASKET WIDGET
+// 4. #BASKET SUMMARY
+// 5. #BASKET FILTERS
+// 6. #FEATURED PRODUCTS
+
+
+
+
+// -------------------------------
+// 1. #Single Product
+// -------------------------------
+
+// Product Item
+.widget__ecomproduct {
+    margin: 20px 0;
+    .clearfix
+}
+
+.ecomproduct__legend {
+    padding: 36px 30px 20px;
+}
+
+.ecomproduct__label {
+    display: block;
+}
+
+.ecomproduct__product-title {
+    @media @tablet {
+        margin-top: 20px;
+    }
+}
+
+.ecomproduct__product-content {
+    padding: 0 0 0 2%;
+    display: inline-block;
+    width: 50%;
+    @media @tablet {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.ecomproduct__product-actions {
+    form {
+        padding: 0;
+        width: 100%;
+    }
+}
+
+.product-images {
+    width: 50%;
+    float: left;
+    padding: 0 2% 0 0;
+    @media @tablet {
+        width: 100%;
+    }
+}
+
+.ecomproduct__image-link {
+    background: no-repeat;
+}
+
+.product-image .image-link {
+    max-height: 600px;
+    line-height: 100%;
+    height: 100%;
+}
+
+// Product Information
+.ecomproduct__form {
+    border: 0;
+    .form-group {
+        margin-bottom: 0;
+    }
+}
+
+.product-attributes {
+    margin: 10px 0;
+    clear: both;
+}
+
+.ecomproduct__category-link,
+.ecomproduct__tag-link {
+    color: @color__button--background--hover;
+}
+
+.ecomproduct__select-wrap,
+.ecomproduct__select {
+    display: inline-block;
+}
+
+.ecomproduct__select-wrap {
+    margin-bottom: 5px;
+}
+
+.ecomproduct__product-category {
+    margin-bottom: 5px;
+}
+
+// Basket Buttons
+.ecomproduct__view-basket-wrap {
+    text-align: center;
+}
+
+.js-ecom-product-add-to-cart-btn {
+    float: right;
+    width: 52%;
+    padding: 12px;
+    background-color: @color__button--background;
+    &:hover {
+        background-color: @color__button--background--hover;
+    }
+}
+
+.ecom-product-go-to-checkout-btn {
+    padding: 12px 12px;
+    width: 48%;
+    background-color: @color__button--background;
+    &:hover {
+        background-color: @color__button--background--hover;
+    }
+}
+
+
+
+
+// -----------------------------
+// 2. #Product List
+// -----------------------------
+
+// Product List
+.product-list {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: space-between;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+// Product Item
+.product-item {
+    position: relative;
+    width: 32%;
+    margin-bottom: 2%;
+    // Display 100% at mobile
+    @media @mobile {
+        width: 100%;
+        margin-bottom: 4%;
+    }
+}
+
+.product-item-details {
+    margin: 20px 0px;
+    text-align: center;
+}
+
+.ecomproductslist__product-item-title {
+    color: @color__h4--text;
+    margin-bottom: 10px;
+}
+
+.ecomproductslist__product-item-price, 
+.ecomfeaturedproducts__product-item-price {
+    background-color: @color__secondary;
+    padding: 5px 10px;
+    display: inline-block;
+    color: @color__button--text;
+}
+
+.ecomproductslist__product-content h3 {
+    font-size: @font__h4--font-size;
+}
+
+.ecomproductslist__button {
+    background-color: @color__button--background;
+    color: @color__button--text;
+    padding: 4px 20px;
+}
+
+.listing-pagination .pagination-item.current a {
+    background-color: @color__button--background--hover;
+    color: @color__button--text;
+}
+
+
+
+
+// -----------------------------
+// 3. #Basket Widget
+// -----------------------------
+
+.basket__basket-item { position: relative; }
+.basket__item-image  { width: 200px; }
+
+// Display basket image and content inline
+.basket-item-image,
+.basket-item-details {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+    @media @tablet {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+// Item Remove Button
+.item-remove {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    // Remove icon spacing
+    &:before {
+        margin-right: 0;
+    }
+}
+// Hide button text
+.remove-text { 
+    display: none;
+}
+
+// Basket Image
+.basket__image {
+    max-height: 200px;
+    max-width: 200px;
+    @media @mobile {
+        max-height: inherit;
+    }
+}
+
+
+
+
+// -------------------------------
+// 4. #BASKET SUMMARY
+// -------------------------------
+
+.ecombasketsummary__summary-title {
+    margin-bottom:20px;
+}
+
+.ecombasketsummary__summary-form {
+    border: 0;
+    padding: 0;
+    background-color: transparent!important;
+    background-image: none;
+}
+
+.ecombasketsummary__quantity-minus, 
+.ecombasketsummary__quantity-plus {
+    vertical-align: top;
+}
+
+.summary-table .cell {
+    padding: 30px 12px;
+    @media @mobile {
+        padding: 10px 15px;
+    }
+}
+
+.ecombasketsummary__quantity-wrap {
+    background-color: #ffffff;
+    @media @mobile {
+        margin: 10px auto;
+        max-width: 100px;
+    }   
+}
+
+.quantity-wrap .button--quantity {
+    @media @mobile {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+// Item Image
+.ecombasketsummary__summary-item-link {
+    background-image: none!important;
+    @media @mobile {
+        margin: 0px auto;
+    }
+}
+
+.ecombasketsummary__image {
+    min-width: 100px;
+    width: 100%;
+    @media @mobile {
+        margin: 0px auto;
+        display: table;
+    }
+}
+
+
+
+
+// -------------------------------
+// 5. #BASKET FILTERS
+// -------------------------------
+
+.ecomproductslist__fieldset--filters {
+    float:left;
+    width: 60%;
+    @media @tablet {
+        width:100%;
+    }
+}
+
+.ecomproductslist__fieldset--search {
+    float: right;
+    width: 40%;
+    @media @tablet {
+        float: initial;
+        width:100%;
+    }
+}
+
+.ecomproductslist__form {
+    max-width: 100%;
+    padding: 20px 20px 5px 20px;
+    .clearfix
+}
+
+.ecomproductslist__form-group {
+    display: inline-block;
+    @media @tablet {
+        width: 100%;
+        display: block;
+    }
+}
+
+.ecomproductslist__legend {
+    display: none;
+}
+
+.ecomproductslist__label {
+    display: block;
+}
+
+.ecomproductslist__form-body {
+    margin: 0;
+}
+
+.ecomproduct__form-body {
+    padding: 0 30px 40px;
+    margin: 0;
+}
+
+.cell--header.ecombasketsummary__cell, 
+.ecombasketsummary__cell {
+    @media @mobile {
+            text-align: center;
+        }
+}
+
+select {
+    font-size: 16px;
+    min-width: 80px;
+    @media @tablet {
+        width: 100%;
+    }
+}
+
+.ecomproductslist__input {
+    padding: 7px 30px;
+}
+
+
+
+
+// -------------------------------
+// 5. #FEATURED PRODUCTS
+// -------------------------------
+
+.ecomfeaturedproducts__listing-title,
+.ecomfeaturedproducts__product-item-title {
+    margin: 10px 0;
+}

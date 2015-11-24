@@ -1,0 +1,348 @@
+// ---------------------------------
+// United: CSS > Template Theme
+// ---------------------------------
+
+// 1. #HEADER & FOOTER
+// 2. #TYPOGRAPHY
+// 3. #FORMS
+// 4. #BUTTONS
+// 5. #IMAGES
+
+
+// -----------------------------
+// 1. #Header & Footer
+// -----------------------------
+
+.template-header,
+.template-footer {
+	.flex-vert-center; // Mixin > Flexbox: Vertical Align Center Mixin
+	min-height: 50px;
+	background-color: @color-swatch4;
+	// Tablet: reduce height
+}
+
+.template-footer .widget__social-icons ul li {
+	padding: 0 3px 0 3px;
+}
+
+.template-footer .widget__social-icons .social-link {
+	border: 0;
+}
+
+.template-footer .widget__social-icons ul li a {
+.icon:before {
+		margin: 0px;
+	}
+}
+
+.template-footer .widget__social-icons .social-link {
+	&:before {
+		margin: 0;
+	}
+}
+
+
+// Footer
+// ------
+
+.template-footer1 {
+	display: block;
+    background-image: image('/images/form-bg.png');
+    background-repeat: repeat;
+    background-position: left center;
+	text-align: center;
+	color: @color__h4--text;
+	padding: 40px 20px;
+	// Change heading elements to white
+	h1, h2, h3, h4 {
+		color: @color__h4--text;
+	}
+	// Lighten paragraph & link elements
+	p, a {
+		color: @color__h4--text;
+		margin: 10px 0 0 0;
+	}
+	// Reset Twitter feed styles
+	.twitter-feed {
+		padding: 0;
+		background-color: transparent;
+	}
+	span {
+		margin: 10px 0px;
+	}
+	.social-social-link {
+		padding: 5px 2px 5px 7px;
+	}
+    @media @mobile {
+        padding: 20px 10px;
+    }
+}
+
+
+.template-footer2 {
+	min-height: 60px;
+	background-color: darken(@color__h1--text,5%);
+	text-align: center;
+	color: @color__feature-headline--text;
+	padding: 15px 20px 0 20px;
+	@media @mobile {
+		min-height: 100px;
+		padding: 15px 20px 20px 20px;
+	}
+	// Change heading elements to white
+	h1, h2, h3, h4 {
+		color: @color__feature-headline--text;
+	}
+	// Lighten paragraph & link elements
+	p, a {
+		color: @color__feature-headline--text;
+	}
+	// Reset Twitter feed styles
+	.twitter-feed {
+		padding: 0;
+		background-color: transparent;
+	}
+	.left {
+		float: left;
+		text-align: left;
+	}
+	.right {
+		float: right;
+		text-align: right;
+	}
+	.left,
+	.right {
+		display: inline-block;
+		@media @mobile {
+			width:100%;
+			text-align: center;
+		}
+	}
+}
+
+
+
+
+// -----------------------------
+// 2. #Typography
+// -----------------------------
+
+// Colour Swatches
+// ---------------
+
+// @color-swatch1: Background 
+// @color-swatch2: Contrast
+// @color-swatch3: Buttons
+// @color-swatch4: Headings
+// @color-swatch5: Paragraph
+// @color-swatch6: Navigation Links
+// @color-swatch7: Spare
+
+
+// Font Swatches
+// -------------
+
+// font1:  Heading 1
+// font2:  Heading 2
+// font3:  Heading 3
+// font4:  Heading 4
+// font5:  Paragraph
+// font6:  Navigation Link
+// font7:  Buttons
+// font8:  Feature Headline
+// font9:  Feature Strapline
+// font10: Company Name (Logo)
+
+
+// Standard Text Link
+// ------------------
+
+a { color: @color__link--text; }
+
+
+// Blockquote
+// ----------
+
+blockquote:before {
+	margin-right: 10px;
+	font-size: 32px;
+	color: @color__secondary;
+}
+
+
+
+
+// -----------------------------
+// 3. #Forms
+// -----------------------------
+
+// Form
+// ----------
+
+.form {
+    padding: 10px 0;
+    display: block;
+    background-color: @color__primary;
+    @media @tablet {
+    	padding:10px 0 5px;
+    }
+}
+
+// Form Body
+.form-body {
+	margin: 0 30px 20px;
+	@media @mobile {
+		margin: 10px 20px 20px 20px;
+	}
+}
+
+// Form Group
+.form-group { 
+	margin-bottom: 20px;
+	@media @mobile {
+		margin-bottom: 10px;
+	}
+}
+
+// Single field form
+.signup-form__form,
+.blog-search__form {
+	legend {
+		display: none;
+	}
+	label {
+		display: inherit;
+	}
+}
+
+// Contact form
+.contact-form__form {
+	label {
+		display: none;
+	}
+}
+
+// Widget Profile Sign Up Form
+.header-content .signupform__form-group {
+    .signupform__label {
+        display: none;
+    }
+    .signupform__form-body {
+        margin: 0 30px 0;
+    }
+}
+
+// Legend
+// ----------
+
+legend { 
+	width: 100%;
+	padding: 10px 30px 20px;
+	color: @color__h2--text;
+	font-size: @font__h1--font-size;
+    line-height: @font__h1--line-height;
+    color: @color__h2--text;
+    font-weight: @font__h1--font-weight;
+    font-family: @font__h1--font-family;
+    @media @mobile {
+    	padding: 10px 20px 10px;
+    }
+}
+
+.signup-form__form label,
+.blog-search__form label {
+	padding: 0px 0px 10px 0px;
+}
+
+label {
+	display:none;
+}
+
+// Select
+// ----------
+
+select {
+    height: 36px;
+    outline: none;
+    border: 1px solid darken(#ffffff,10%);
+    border-radius: 0;
+    background-color: #ffffff;
+    font-size: 12px;
+    text-indent: 0;
+    &:hover, &:focus {
+        background-color: #ffffff;
+        cursor: pointer;
+	}
+}
+
+
+
+
+// Inputs: Text
+// ------------
+
+input[type="search"],
+input[type="email"],
+input[type="password"],
+textarea,
+.input--single-line {
+    border: 0;
+    -webkit-appearance: none;
+    padding: 13px!important;
+    &:focus {
+        border: 0;
+        box-shadow: none;
+        outline: none;
+    }
+}
+.contact-form__form legend,
+.signup-form__form label,
+.blog-search__form label,
+.product-listing__legend {
+    border-bottom: 0;
+    font-size: @font__h1--font-size;
+    font-weight: @font__h1--font-weight;
+}
+
+
+
+
+// -----------------------------
+// 4. #Buttons
+// -----------------------------
+
+button, 
+.button {
+    padding: 8px 20px;
+    background-color: @color__button--background;
+    color: @color__button--text;
+    .transitions;
+    &:hover {
+    	background-color: @color__button--background--hover;
+    }
+}
+
+
+
+
+// -----------------------------
+// 5. #Images
+// -----------------------------
+
+// Image Captions
+// --------------
+
+// Gallery & Slideshow
+.image-title,
+.image-description {
+	color: #ffffff;
+	text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+// Image Widget
+.image-widget__caption { margin: 10px 0; }
+.image-widget__image-title,
+.image-widget__image-description {
+	color: @color__p--text;
+	text-shadow: none;
+}

@@ -1,0 +1,172 @@
+// -------------------------------------
+// Unite: CSS > Plugin: Menu
+// -------------------------------------
+
+// Menu Navigation
+.menusections {
+    background-color: @color__primary;
+    .item-name {
+        color: @color__button--text;
+        background-color: @color__secondary;
+        padding: 10px;
+    }
+}
+
+.menusections-list {
+    text-align: center;
+    padding: 15px 15px 10px;
+}
+
+.menusections-item {
+    margin-right: 0;
+    &:after {
+        content: "/";
+        font-size: 15px;
+        vertical-align: middle;
+        color: @color__secondary;
+        margin-right: 0;
+        padding: 0 20px;
+        @media @mobile {
+            content: "";
+            padding: 0;
+        }
+    }
+    @media @mobile {
+        display: block;
+        margin-right: 0;
+        border-bottom: 1px dotted lighten(#000000,90%);
+        padding: 10px 0px;
+    }
+}
+
+.menusections__item-name {
+    font-family: @font-swatch4-font-family;
+    font-size: @font-swatch4-font-size;
+    font-weight: @font-swatch4-font-weight;
+}   
+
+.menusections-item:last-child:after {
+    display: none;
+}
+
+// Menu Content
+.menu__section-header {
+    margin: 10px 0px 30px;
+    text-align: left;
+    border-bottom: 1px solid lighten(#000000,90%);
+    p {
+       margin-bottom: 10px; 
+    }
+}
+
+.menu__section-subtitle {
+    margin-bottom: 15px;
+}
+
+.menu__menu-section .menu__section-title {
+    font-family: @font__h1--font-family;
+    font-size: @font__h1--font-size;
+    font-weight: @font__h1--font-weight;
+    color: @color__h1--text;
+}
+
+.menu-section--subsection .menu__section-title {
+    font-family: @font__h2--font-family;
+    font-size: @font__h2--font-size;
+    font-weight: @font__h2--font-weight;
+    color: @color__h2--text;
+}
+
+.menu__section-subtitle {
+    font-family: @font__p--font-family;
+    font-size: @font__p--font-size;
+    font-weight: @font__p--font-weight;
+    color: @color__p--text;
+}
+
+.menu__item-title {
+    float: left;
+    width: 75%;
+    text-align: left;
+}
+
+.menu__item-subtitle {
+    color: @color__h4--text;
+}
+
+.menu__dietary-item {
+	&:before {
+        content: "\f005";
+		font-size: 10px;
+		vertical-align: middle;
+        color: @color__button--background--hover;
+    }
+}
+
+.item-price {
+    display: inline-block;
+    color: @color__button--text;
+    background-color: @color__secondary;
+    padding: 5px 10px;
+    float: right;
+}
+
+.menu__item-description {
+    clear: both;
+    border-top: 1px solid lighten(#000000,90%);
+    padding-top: 20px 0 10px;
+    text-align: left;
+}
+
+.menu__dietary-item {
+    background-color: lighten(#000000,90%);
+    padding: 0 5px;
+    margin-top: 5px; 
+}
+
+// Item Image
+.item-image {
+	background-color: darken(@color__body--background,5%);
+}
+
+.odd.bk1-columns {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+    max-width: 100%;
+    text-align: left;
+}
+
+.menu__item-article .item-content {
+    margin-top: 20px;
+}
+
+.menu .item-image .image-link {
+    background-color: darken(@color__body--background,12%);
+}
+
+// Menu Footer
+.menu__section-footer {
+    text-align: center;
+    border: 1px solid lighten(#000000,90%);
+    padding: 20px 0 10px;
+}
+
+// Featured Section
+.menu-section--featured, 
+.menu-item--featured  {
+    -webkit-box-shadow: 1px 1px 1px 0px rgba(230,230,230,1);
+    -moz-box-shadow:    1px 1px 1px 0px rgba(230,230,230,1);
+    box-shadow:         1px 1px 1px 0px rgba(230,230,230,1);
+    border: 1px solid lighten(#000000,90%);
+    padding: 20px;
+}
+
+.menu-item--featured .menu__item-subtitle:after,
+.menu-section--featured .menu__item-subtitle:after {
+    border-top: 1px solid lighten(#000000,80%);
+}
+
+.menu-section--featured {
+    margin: 30px 0px;
+}

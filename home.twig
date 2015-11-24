@@ -1,0 +1,28 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+{% include "includes/header.twig" %}
+
+<!-- Homepage Feature -->
+{{widget('feature', 'featurehome', {
+	"header": "profile",
+	"defaultBgImg": asset('images/feature-bg.jpg'),
+	'positionTopPercentage': '0',
+	'showBtn': true,
+	buttonText: "Lorem Ipsum"
+})|raw}}
+<!-- End Homepage Feature -->
+
+	<!-- Page Content -->
+	<section class="template-content container">
+
+		<!-- Main Widet Zone -->
+	   	{{zone('main')|raw}}
+
+	</section>
+	<!-- End Page Content -->
+
+{% include "includes/footer.twig" %}
+
+{% endblock %}

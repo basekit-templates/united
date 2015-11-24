@@ -1,0 +1,1296 @@
+// --------------------------------
+// United: CSS > Widgets
+// --------------------------------
+
+
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+//  1.   #LOGO
+//  2.   #COMPANY NAME
+//  3.   #NAVIGATION
+//  4.   #FEATURE
+
+//  5.   #IMAGES
+//  6.   #GALLERY
+//  7.   #SLIDESHOW
+
+//  8.   #BUTTONS
+//  8.1  -- #STANDARD
+//  8.2  -- #TWEET
+//  8.3  -- #DROPBOX
+//  8.4  -- #CLICK TO CALL
+//  8.5  -- #PAYPAL
+
+//  9.   #CONTACT FORM
+// 10.   #SIGNUP FORM
+
+// 11.   #SOCIAL ICONS
+// 12.   #TWITTER FEED
+
+// 13.   #DIVIDER (KEYLINE)
+// 14.   #PROFILE
+// 15.   #FACEBOOK
+// 16.   #YELP
+// 17.   #MAP
+// 18.   #HR LINE
+
+
+
+
+// -----------------------------
+// 1.  #Logo
+// -----------------------------
+
+.widget__logo {
+    margin-right: 10px;
+    @media @tablet {
+        margin-right: 0;
+    }
+}
+
+.logo-link {
+    @media @tablet {
+        margin: 0px auto;
+        display: table;
+    }
+}
+
+.header-logo {
+    // Flex child
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+
+    // Layout
+    text-align:center;
+    max-width: 100%;
+
+    @media @tablet {
+        -webkit-order: 1;
+        -ms-flex-order: 1;
+        order: 1;
+        text-align: left;
+        display: block;
+        padding: 10px 0px;
+    }
+
+    img, .logo {
+        line-height: 0;
+    }
+}
+
+
+
+
+// -----------------------------
+// 2.  #Company Name
+// -----------------------------
+
+.header-companyname {
+    // Flex child
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+    -webkit-box-flex: 10;
+    -moz-box-flex: 10;
+    -webkit-flex: 10 10 auto;
+    -ms-flex: 10 10 auto;
+    flex: 10 10 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    @media @tablet {
+        -webkit-order: 2;
+        -ms-flex-order: 2;
+        order: 2;
+        display: block;
+    }
+}
+
+.companyname {
+    a {
+        text-decoration: none;
+    }
+    @media @tablet {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+
+// -----------------------------
+// 3.  #Navigation
+// -----------------------------
+
+// See 'less/navigation.less'
+
+// Folder Item Parent: Gives arrow 
+.item-name--parent:after {
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    margin-left: 4px;
+    border: 5px solid transparent;
+    border-top-color: #ffffff;
+}
+
+// Add Styles to Selected Li
+.extendednavigation li.selected {
+    a, .text {
+        color: @color__navigation--text--selected;
+    }
+}
+
+.header-extendednavigation {
+    // Flex child
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 4;
+    -ms-flex-order: 4;
+    order: 4;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    @media @tablet {
+        -webkit-order: 4;
+        -ms-flex-order: 4;
+        order: 4;
+        margin: 0;
+        width: 100%;
+    }
+}
+
+
+
+
+// -----------------------------
+// 4.  #Feature
+// -----------------------------
+
+// Feature Background (Image)
+// --------------------------
+
+.feature__background-image {
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: table;
+    min-height: 500px;
+    height: 600px;
+    width: 100%;
+    @media @tablet {
+        min-height: 300px;
+        max-height: 500px;
+    }
+    @media @mobile {
+        min-height: 200px;
+        max-height: 400px;
+    }
+    &:after {
+        display: none;
+    }
+}
+
+
+// Feature Content Wrap
+// --------------------
+
+.feature__content-wrap {
+    display: table-cell;
+    padding: 30px 40px;
+    text-align: left;
+    vertical-align: middle;
+    @media @tablet {
+        text-align: center;
+    }
+    @media @mobile {
+        padding: 30px 10px;
+    }
+}
+
+.feature__content-inner-wrap {
+    background-color: @color__feature-content--background;
+    display: inline-block;
+    padding: 40px;
+    max-width: 50%;
+    @media @tablet {
+        max-width: 100%;
+    }
+    @media @mobile {
+        padding: 20px;
+    }
+}
+
+
+// Feature Content
+// ---------------
+
+// Feature Headline
+.feature__headline {
+    @media @tablet {
+        font-size: bkscale(@font__feature-headline--font-size, 0.8);
+        line-height: bkscale(@font__feature-headline--line-height, 0.7);
+    }
+    @media @mobile {
+        font-size: bkscale(@font__feature-headline--font-size, 0.7);
+        line-height: bkscale(@font__feature-headline--line-height, 0.6);
+    }
+}
+
+// Feature Strapline
+.feature__strapline {
+    @media @tablet {
+        font-size: bkscale(@font__feature-strapline--font-size, 0.9);
+        line-height: bkscale(@font__feature-strapline--line-height, 0.8);
+    }
+    @media @mobile {
+        font-size: bkscale(@font__feature-strapline--font-size, 0.8);
+        line-height: bkscale(@font__feature-strapline--line-height, 0.7);
+    }
+}
+
+
+// Feature Button
+// ---------------
+
+.feature__button { 
+    margin: 10px 0 0 0;
+    background-color: @color__feature-button--background;
+    &:after {
+        content:"\f054";
+        color: @color__button--text;
+        padding: 0 0 0 10px;
+        font-family: fontawesome;
+        vertical-align: middle;
+    }
+    &:hover {
+        background-color: darken(@color__feature-button--background,10%);
+    } 
+}
+
+
+// Default Page Feature
+// --------------------------
+
+.default-feature .feature__background-image {
+    height: 150px;
+}
+
+
+
+
+// -----------------------------
+// 5.  #Images
+// -----------------------------
+
+// Image Captions
+// --------------
+
+
+// Gallery & Slideshow
+.image-title,
+.image-description {
+    color: @color__p--text;
+}
+
+// Image Widget
+.imagewidget__image-title,
+.imagewidget__image-description {
+    color: @color__h4--text;
+    font-size: @font__h4--font-size;
+    line-height: @font__h4--line-height;
+    text-shadow: none;
+}
+
+.imagewidget__image-description {
+    color: @color__p--text;
+    font-size: @font__p--font-size;
+    line-height: @font__p--line-height;
+}
+
+// Image Widget
+.image-widget__image-title,
+.image-widget__image-description {
+    color: @color__p--text;
+}
+
+
+
+
+// -----------------------------
+// 6.  #Gallery
+// -----------------------------
+
+// Widget Gallery Layout
+// --------------
+
+.widget__gallery {
+    // Gallery List
+    .gallery-list {
+        .clearfix; 
+    }
+    // Gallery Item
+    .gallery-item {
+        display: inline-block;
+        float: left;
+        position: relative;
+        width: 33.333%;
+        .transitions;
+        vertical-align: top;
+        // Display at 100% at tablet
+        @media @tablet {
+            width: 50%;
+        }
+        @media @mobile {
+            width: 100%;
+        }
+        &:hover {
+            opacity: 1!important;
+            .image-link {
+                text-decoration: none;
+            }
+            figcaption {
+                background-color: @color__secondary;
+                display: flex;
+                height: 100%;
+                opacity: 1;
+                .transitions;
+                visibility: visible;
+            }
+        }
+    }
+    // Hide Figcaption
+    figcaption {
+        // Flex
+        display: flex;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        position: absolute;
+        display: block;
+        height: 0;
+        margin: 0;
+        padding: 0 15px;
+        opacity: 0;
+        text-align: center;
+        top: 0;
+        width: 100%;
+        visibility: hidden;
+        @media @mobile {
+            left: 0;
+        }
+        .caption-link:hover {
+            text-decoration: none;
+        }
+        .image-title {
+            color: @color-swatch1;
+            text-transform: uppercase;
+            font-family: @font__h4--font-family;
+            letter-spacing: 1px;
+            font-size: 15px;
+            display: block;
+            padding: 6px 12px 5px;
+            border-bottom: 1px solid fade(#ffffff, 50%);
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            @media screen and (max-width: 164px) {
+                display: none;
+            }
+        }
+        .image-description {
+            color: #ffffff;
+            font-size: 15px;
+            line-height: 23px;
+            @media screen and (max-width: 164px) {
+                display: none;
+            }
+        }
+    }
+    // Use Background Image
+    .image-link {
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding-bottom: 100%;
+        // Hide Inline Image
+        .image {
+            display: none;
+        }
+    }
+}
+
+
+// Gallery Images
+// --------------
+
+// Hide Img Element
+.image-gallery__image {
+    display: none;
+}
+
+
+// Gallery Image Captions
+// ----------------------
+
+// Hide Caption
+.image-gallery__caption {
+    display: none;
+    margin: 0;
+    padding: 20px;
+    background-color: hsla(hue(@spare-color), saturation(@spare-color), lightness(@spare-color), 0.8); 
+}
+
+// Show Caption
+.image-link:hover .image-gallery__caption {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.responsivecolumns .gallery__caption-link {
+    display: none;
+}
+
+.responsivecolumns .widget__gallery .gallery-item:hover figcaption {
+    background-color: transparent;
+}
+
+
+
+
+// -----------------------------
+// 7.  #Slideshow
+// ----------------------------- 
+
+// Slideshow Layout
+// ----------------
+
+// Slideshow Height
+.responsiveslideshow, .responsiveslideshow__figure {
+    position: relative;
+    min-height: 400px;
+}
+
+.responsiveslideshow__slideshow-controls, 
+.responsiveslideshow__caption {
+    text-align: center;
+    margin-top: 15px;
+}
+
+
+// Slideshow Images
+// ----------------
+
+// Use Background-image Method
+.responsiveslideshow__figure {
+    background-size: cover;
+    background-position: center;
+}
+
+// Hide Img Element
+.responsiveslideshow_image {
+    display: none;
+}
+
+
+// Slideshow Image Captions
+// ------------------------
+
+.responsiveslideshow .caption {
+    position: absolute;
+    bottom: 35px;
+    width: 100%;
+    padding: 20px;
+    @media @mobile {
+        display:none;
+    }
+}
+
+.responsiveslideshow__image-title, 
+.responsiveslideshow__image-description {
+    display: block;
+    padding: 0 10%;
+}
+
+.responsiveslideshow__image-title {
+    line-height: @font__h4--line-height;
+}
+
+// Slideshow Buttons
+.responsiveslideshow__slide-navigation button {
+        @media @mobile {
+        padding: 4px 12px;
+    }
+}
+
+// Navigation Buttons
+.slide-navigation {
+    position: absolute;
+    top: 355px;
+    width: 100%;
+    background-color: #000000;
+}
+
+.previous-button {
+    float: left;
+}
+
+.next-button {
+    float: right;
+}
+
+.pause-toggle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0px auto;
+    display: table;
+    width: 110px;
+}
+
+.responsiveslideshow__pause-toggle {
+    &:before {
+        margin-right: 0;
+    }
+}
+
+.button--pagination.slideshow__button {
+    vertical-align: top;
+    padding: 10px;
+    border: 4px solid lighten(#000000, 40%);
+    background-color: transparent;
+    &:hover {
+        background-color: @color__feature-button--background;
+    }
+}
+
+.slide-pagination {
+    margin-top: 30px;
+}
+
+
+
+
+// -----------------------------
+// 8.  #Buttons
+// -----------------------------
+
+
+//  8.1  #STANDARD
+//  --------------
+
+.feature__button {
+    padding: 8px 30px;
+}
+
+
+//  8.2  #TWEET
+//  --------------
+
+.tweet-button .icon:before {
+    margin-right:5px;
+    color: darken(@color__feature-button--background, 10%);
+    font-size:20px;
+    padding: 0 10px 0 0;
+}
+
+.tweet-button__button {
+    background-color: @color__feature-button--background;
+    &:hover {
+        background-color: @color__feature-button--background--hover;
+    }
+}
+
+
+//  8.3  #DROPBOX
+//  --------------
+
+.dropbox-button .icon:before {
+    margin-right:5px;
+    color: darken(@color__feature-button--background, 10%);
+    font-size:20px;
+    padding: 0 10px 0 0;
+}
+
+.dropbox-button__button {
+    background-color: @color__feature-button--background;
+    &:hover {
+        background-color: @color__feature-button--background--hover;
+    }
+}
+
+
+//  8.4  #CLICK TO CALL
+//  --------------
+
+.clicktocall__phone-number-link {
+    color: @color__navigation--text;
+    &:hover {
+        text-decoration: none;
+        background-color: transparent;
+    }
+}
+
+.phone-number-link {
+    @media @mobile {
+        padding: 10px 20px;
+    }
+}
+
+//  8.5  #PAYPAL
+//  --------------
+
+.widget__paypalbuynow form {
+    border: 0;
+    padding:0;
+    margin:0;
+}
+
+.widget__paypalbuynow__button {
+    background-color: @color__feature-button--background;
+    &:hover {
+        background-color: @color__feature-button--background--hover;
+    }
+}
+
+
+
+
+// -----------------------------
+// 9.  #Contact Form
+// -----------------------------
+
+.widget__contactform {
+    display: block;
+    background-color: @color__primary;
+}
+
+.contactform .form {
+    background-color: transparent;
+}
+
+// Body
+.contact-form__form-body {
+    margin: 0px 30px;
+    text-align: center;
+}
+
+// Legend
+.contactform .legend {
+    font-size: @font__h1--font-size;
+    line-height: @font__h1--line-height;
+    color: @color__h1--text;
+    font-weight: @font__h1--font-weight;
+    font-family: @font__h1--font-family;
+} 
+
+// Inputs
+input.input[type=email],
+input.input[type=search], 
+.contact-form__textarea {
+    border: 0;
+    background-color: @color-swatch1;
+    padding: 10px;
+    &:focus {
+        border-color: @color-swatch4;
+    }
+}
+
+// Button
+.contact-form__button {
+    margin:0px auto;
+    display:table;
+    border:0;
+    padding: 8px 30px;
+    background-color: @color-swatch3;
+    border: 4px solid darken(@color-swatch3,4%);
+    color: @color__button--text;
+}
+
+.contact-form__input {
+    display:table;
+}
+
+
+
+
+// -----------------------------
+// 10.  #Signup Form
+// -----------------------------
+
+.signup-form__legend {
+    padding:0;
+}
+
+.signup-form__input {
+    display:table;
+}
+
+.signupform__form-body {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    }
+
+.signupform__form-group:nth-child(1) {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    }
+
+.signupform__form-group:nth-child(2) {
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+}
+
+
+
+
+// -----------------------------
+// 11.  #Social Icons
+// -----------------------------
+
+.social-list {
+    padding:0;
+    list-style: none;
+}
+
+.social-item {
+    margin-bottom: 10px;
+}
+
+.social-link {
+    display: inline-block;
+    padding: 10px 10px 10px 15px;
+    border: 3px solid @color-swatch3;
+    &:hover {
+        border: 3px solid @color-swatch4;
+        text-decoration: none;
+        .transitions
+    }
+    .icon:before {
+        margin: 0;
+    }
+}
+
+.social-name {
+    display: none;
+}
+
+.social-link {
+    &:before {
+        color: @color-swatch3;
+    }
+    &:hover:before {
+        color: @color-swatch4;
+        .transitions
+    }   
+}
+
+// Header Social Icons Widget
+.headercolumn1socialicons {
+    // Flex child
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 3;
+    -ms-flex-order: 3;
+    order: 3;
+    -webkit-box-flex: 10;
+    -moz-box-flex: 10;
+    -webkit-flex: 10 10 auto;
+    -ms-flex: 10 10 auto;
+    flex: 10 10 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    @media @tablet {
+        -webkit-order: 3;
+        -ms-flex-order: 3;
+        order: 3;
+        display: block;
+    }
+}
+
+
+
+
+// -----------------------------
+// 12.  #Twitter Feed
+// -----------------------------
+
+// Body
+.widget__twitter {
+    background-color: @color-swatch1;
+    border: 1px solid lighten(@color-swatch4,90%);
+    padding: 15px 20px 10px;
+    @media @tablet {
+        padding:20px;
+    }
+}
+
+.tweet-list {
+    padding:0;
+}
+
+// Content
+.twitter__avatar {
+    display: inline-block;
+    margin-right: 20px;
+    @media @mobile {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+.twitter__tweet-wrap {
+    display: inline-block;
+    vertical-align: top;
+    margin: 1px 0 0 0;
+    @media @tablet {
+        max-width:320px;
+    }
+    a {
+        font-weight: @font-swatch1-font-weight;
+        text-decoration: none;
+    }
+    p {
+        padding-bottom:0;
+    }
+}
+
+.twitter__tweet-item {
+    border-bottom: 1px solid lighten(@color-swatch4,90%);
+    padding: 0 0 20px 0;
+    margin: 10px 0 20px 0;
+    &:last-child {
+        border-bottom:0;
+        padding:0 0 7px 0;
+        margin:0 0 7px 0;
+    }
+}
+
+.account-link {
+    background-color: @color-swatch3;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    color: @color__button--text;
+    font-size: @font-swatch4-font-size;
+}
+
+.tweet-content {
+    margin-top: 5px;
+}
+
+
+
+
+// -----------------------------
+// 13.  #Divider (Keyline)
+// -----------------------------
+
+// Add styles here...
+
+
+
+
+// -----------------------------
+// 14. #Profile
+// -----------------------------
+
+// Widget Profile
+.companystrapline__strapline,
+.companydescription__description,
+.companyaddress__address-line,
+.emailaddress__email,
+.companyphone__phone-number-link,
+.companybusiness__business,
+.companycopyright__copyright,
+.companyheadline__headline,
+.profile__companystrapline {
+    color: @color__navigation--text;
+    font-size: @font-swatch6-font-size;
+    line-height: @font-swatch6-line-height;
+    font-weight: @font-swatch6-font-weight;
+}
+
+.header-content {
+    .companystrapline__strapline,
+    .companydescription__description,
+    .companyaddress__address-line,
+    .emailaddress__email,
+    .companyphone__phone-number-link,
+    .companybusiness__business,
+    .companycopyright__copyright,
+    .companyheadline__headline,
+    .profile__companystrapline {
+        color: @color__navigation--text;
+        font-size: @font-swatch6-font-size;
+        line-height: @font-swatch6-line-height;
+        font-weight: @font-swatch6-font-weight;
+        max-width: 400px;
+    }
+}
+
+// Phone Number
+.companyphone__phone-number-link {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+// Social Icons
+.template-footer2 .social-link {
+    padding: 0;
+    border: 0;
+    &:before {
+        color: @color__companyname--text;
+    }
+    &:hover {
+        text-decoration: none;
+        .transitions
+    }
+    .icon:before {
+        margin: 0;
+    }
+}
+
+//  #Header Profile Widgets
+//  --------------
+
+.header-content {
+    // Flex child
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 4;
+    -ms-flex-order: 4;
+    order: 4;
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    border-left: 1px solid darken(@color-swatch1,80%);
+    @media @tablet {
+        -webkit-order: 4;
+        -ms-flex-order: 4;
+        order: 4;
+        display:block;
+        border-left: 0;
+        margin-top: 15px;
+    }
+}
+
+// Social Icons
+.template-header .social-link {
+    padding: 0;
+    border: 0;
+    &:before {
+        color: @color__companyname--text;
+    }
+    &:hover {
+        text-decoration: none;
+        .transitions
+    }
+    .icon:before {
+        margin: 0;
+    }
+}
+
+.header-content {
+    .social-item {
+        margin-bottom:0;
+    }
+    .profile__companycopyright,
+    .profile__companyaddress,
+    .profile__companybusiness,
+    .profile__companyheadline {
+        margin-top: 10px;
+    }
+    .companyaddress__address-line {
+        display: inline-block;
+    }
+    .profile__message, 
+    .companyheadline__headline, 
+    .message p,
+    .twitter__tweet-content,
+    .twitter__timestamp,
+    .twitter__tweet-meta {
+        color: @color__companyname--text;
+    }
+} 
+
+.header-content .widget--template-widget {
+    display: inline-block;
+    margin-left: 15px;
+    @media @tablet {
+        margin: 0px auto;
+        display: table;
+    }
+}
+
+.header-content .signupform__form-group {
+    display:inline-block;
+    margin-bottom: 10px;
+    .signupform__form {
+        padding: 20px 0 10px;
+    }
+}
+
+.header-content .twitter__avatar { 
+    @media @mobile {
+        text-align: center;
+    }
+}
+
+
+//  #footer1 Profile Widgets
+//  ------------------------
+
+.widget-profile-footer {
+    margin-top: 10px;
+}
+
+.template-footer1 .twitter__avatar {
+    display: table;
+    margin: 0px auto 20px;
+    @media @mobile {
+        display: table;
+        margin: 0px auto 20px;
+    }
+}
+
+.template-footer1 input[type="email"] {
+    width: 50%;
+    @media @mobile {
+        width: 60%;
+    }
+}
+
+.template-footer1 legend {
+    @media @tablet {
+        text-align: center;
+        margin: 0px auto;
+        display: table;
+    }
+}
+
+.template-footer1 .signupform__legend {
+    text-align: center;
+}
+
+.template-footer1 .profile__map {
+    margin-top: 10px;
+}
+
+.template-footer1 .signupform__form {
+    padding: 0;
+}
+
+.template-footer1 p, .template-footer1 a {
+    padding: 0;
+}
+
+.template-footer1 .twitter__tweet-wrap p {
+    max-width: 60%;
+    width: 100%;
+    margin: 10px auto 0;
+    @media @tablet {
+        max-width: 100%;
+    }
+}
+
+//  #footer2 Profile Widgets
+//  ------------------------
+
+.template-footer2 .twitter__avatar {
+    display: inline-block;
+    margin-left: 20px;
+    float: right;
+    @media @mobile {
+        display: table;
+        margin: 0px auto 20px;
+        float: initial;
+    }
+}
+
+.template-footer2 .profile__companystrapline {
+    margin-bottom: 10px;
+}
+
+.template-footer2 .signupform__form-group {
+    margin-bottom: 0;
+}
+
+.template-footer2 .signupform__input {
+    display: inline-block;
+    float: left; 
+    width: 70%;
+    padding: 13px!important;
+}
+
+.template-footer2 .button--submit {
+    width: 30%;
+    display: inline-block;
+    padding: 8px 8px 7px 8px;
+}
+
+.template-footer2 .signupform__form {
+    padding: 20px 0 20px;
+    margin-bottom: 20px;
+}
+
+.template-footer2 .map__embed-wrap {
+    margin-bottom: 20px;
+}
+
+.template-footer2 .signupform__legend {
+    display: none;
+}
+
+.template-footer2 .signupform__form-body {
+    margin: 0 30px 0;
+}
+
+.template-footer2 .map__embed-wrap {
+    min-width: 300px;
+}
+
+.template-footer2 .profile__signupform {
+    @media @mobile {
+        text-align: center;
+    }
+}
+
+.template-footer2 .signupform__form {
+    @media @mobile {
+        padding: 20px 0 10px;
+    }
+}
+
+
+
+// -----------------------------
+// 15. #Facebook
+// -----------------------------
+
+.fb_iframe_widget_fluid span {
+    max-width: 100%;
+}
+
+
+
+
+// -----------------------------
+// 16. #Yelp
+// -----------------------------
+
+.yelp-reviews__review-title {
+    font-size: @font-swatch4-font-size;
+}
+
+
+
+
+// -----------------------------
+// 17. #Map
+// -----------------------------
+
+.bk-map.map.widget__map {
+    min-height: 100px;
+    height: 100%;
+}
+
+
+
+
+// -----------------------------
+// 18. #Yelp
+// -----------------------------
+
+hr.rule {
+    background-color: darken(@color-swatch1, 7%);
+}
