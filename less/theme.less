@@ -17,7 +17,7 @@
 .template-footer {
 	.flex-vert-center; // Mixin > Flexbox: Vertical Align Center Mixin
 	min-height: 50px;
-	background-color: @color-swatch4;
+	background-color: @color__header--background;
 	// Tablet: reduce height
 }
 
@@ -47,9 +47,7 @@
 
 .template-footer1 {
 	display: block;
-    background-image: image('/images/form-bg.png');
-    background-repeat: repeat;
-    background-position: left center;
+    background-color: @color-swatch7;
 	text-align: center;
 	color: @color__h4--text;
 	padding: 40px 20px;
@@ -182,7 +180,7 @@ blockquote:before {
 .form {
     padding: 10px 0;
     display: block;
-    background-color: @color__primary;
+    background-color: @color__secondary;
     @media @tablet {
     	padding:10px 0 5px;
     }

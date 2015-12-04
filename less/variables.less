@@ -59,9 +59,6 @@ button,
 	&__navigation-item.selected > .item-name {
 		color: @color__navigation--text--selected;
 	}
-	&__navigation-item--background {
-		background-color: @color__navigation-item--background;
-	}
 }
 
 .feature {
@@ -83,31 +80,28 @@ button,
 
 form,
 .form {
+	background-color: @color__form--background;
 	legend,
 	.legend {
 		color: @color__form-legend--text;
 	}
 }
 
-.gallery {
-	&__caption.caption {
-		background-color: @color__gallery-caption--background
-	}
-	&__image-title.image-title {
-		color: @color__gallery-title--text;
-	}
-	&__image-description.image-description {
-		color: @color__gallery-description--text;
+.twitter {
+	&__account-link {
+		background-color: @color__twitter-account-name--background;
+		color: @color__twitter-account-name--text;
 	}
 }
 
-.twitter {
-	background-color: @color__twitter--background;
-	&__tweet-item {
-		background-color: @color__twitter-item--background;
-	}
-	&__account-link {
-		color: @color__twitter-account-name--background;
+.socialicons {
+	&__social-link {
+		&:before {
+			color: @color__socialicons--icon;
+		}
+		&:hover:before {
+			color: @color__socialicons--icon--hover;
+		}
 	}
 }
 
@@ -121,20 +115,7 @@ form,
 }
 
 .blogpost {
-	&__post-article {
-		background-color: @color__blogpost-article--background;
-	}
 	&__post-title {
 		color: @color__blogpost-title--text;
-	}
-}
-
-.menu {
-	.menu-item {
-		&--featured {
-			.item-image .image-link {
-				background-color: lighten(@color__menu-section-featured--background, 2%);
-			}
-		}
 	}
 }

@@ -1,4 +1,4 @@
 United
 =========
 
-BaseKit Standard Theme
+BaseKit v8 Template
