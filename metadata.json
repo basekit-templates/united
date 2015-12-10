@@ -129,7 +129,7 @@
             "font-weight": "700",
             "line-height": "60px",
             "color": "@color-swatch1",
-            "letter-spacing": "3px"
+            "letter-spacing": "1px"
         },
         "font9": {
             "font-family": "\"Petrona\", \"Georgia\", serif",
