@@ -172,6 +172,10 @@
     -webkit-align-self: auto;
     -ms-flex-item-align: auto;
     align-self: auto;
+    @media @tablet {
+        display: inline-block;
+        float: left;
+    }
 }
 
 
@@ -1047,6 +1051,10 @@ input.input[type=search],
     -ms-flex-item-align: auto;
     align-self: auto;
     border-left: 1px solid darken(@color-swatch1,80%);
+    @media @tablet {
+        display: inline-block;
+        float: right;
+    }
 }
 
 // Social Icons
