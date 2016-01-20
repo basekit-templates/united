@@ -204,7 +204,7 @@
             "font__button--font-size" : "@font-swatch7-font-size",
             "font__button--font-weight" : "@font-swatch7-font-weight",
             "font__button--line-height" : "@font-swatch7-line-height",
-            "font__button--letter-spacing" : "@font-swatch7-letter-spacing"      
+            "font__button--letter-spacing" : "@font-swatch7-letter-spacing"
         },
         "header": {
             "color__header--background": "@color__primary"
@@ -220,7 +220,7 @@
             "font__navigation--font-size" : "@font-swatch6-font-size",
             "font__navigation--font-weight" : "@font-swatch6-font-weight",
             "font__navigation--line-height" : "@font-swatch6-line-height",
-            "font__navigation--letter-spacing" : "@font-swatch6-letter-spacing"       
+            "font__navigation--letter-spacing" : "@font-swatch6-letter-spacing"
         },
         "feature": {
             "color__feature--background": "@color-swatch7",
@@ -240,6 +240,10 @@
             "font__feature-strapline--font-weight" : "@font-swatch9-font-weight",
             "font__feature-strapline--line-height" : "@font-swatch9-line-height",
             "font__feature-strapline--letter-spacing" : "@font-swatch9-letter-spacing"
+        },
+        "slideshow": {
+            "color__gallery-caption--background": "rgba(0, 0, 0, 0.25)",
+            "color__slideshow-title--text": "white"
         },
         "forms": {
             "color__form-legend--text": "@color-swatch4",
