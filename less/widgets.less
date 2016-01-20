@@ -543,10 +543,17 @@
 .responsiveslideshow__image-description {
     display: block;
     padding: 0 10%;
+    color: @font-swatch7-color;
 }
 
 .responsiveslideshow__image-title {
+    font-size: @font__h4--font-size;
     line-height: @font__h4--line-height;
+}
+
+.responsiveslideshow__image-description {
+    font-size: @font__p--font-size;
+    line-height: @font__p--line-height;
 }
 
 // Slideshow Buttons
@@ -697,11 +704,6 @@
 
 .widget__contactform {
     display: block;
-    background-color: @color__secondary;
-}
-
-.contactform .form {
-    background-color: transparent;
 }
 
 // Body
@@ -843,7 +845,7 @@ input.input[type=search],
 .social-link {
     display: inline-block;
     padding: 10px 10px 10px 15px;
-    border: 3px solid @color-swatch3;
+    border: 3px solid @color__socialicons--icon;
     &:hover {
         border: 3px solid @color-swatch4;
         text-decoration: none;
