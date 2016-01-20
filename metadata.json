@@ -249,11 +249,6 @@
             "color__form-legend--text": "@color-swatch4",
             "color__form--background": "@color-swatch7"
         },
-        "gallery": {
-            "color__gallery-caption--background": "@color-swatch3",
-            "color__gallery-title--text": "@font-swatch7-color",
-            "color__gallery-description--text": "@font-swatch7-color"
-        },
         "twitter": {
             "color__twitter-account-name--background": "@color-swatch3",
             "color__twitter-account-name--text": "@font-swatch7-color"
