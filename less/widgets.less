@@ -142,7 +142,7 @@
 
 // See 'less/navigation.less'
 
-// Folder Item Parent: Gives arrow 
+// Folder Item Parent: Gives arrow
 .item-name--parent:after {
     display: inline-block;
     vertical-align: middle;
@@ -238,7 +238,7 @@
     display: inline-block;
     padding: 40px;
     max-width: 50%;
-    @media @tablet {
+    @media only screen and (max-width: 860px) {
         max-width: 100%;
     }
     @media @mobile {
@@ -252,7 +252,7 @@
 
 // Feature Headline
 .feature__headline {
-    @media @tablet {
+    @media only screen and (max-width: 860px) {
         font-size: bkscale(@font__feature-headline--font-size, 0.8);
         line-height: bkscale(@font__feature-headline--line-height, 0.7);
     }
@@ -264,7 +264,7 @@
 
 // Feature Strapline
 .feature__strapline {
-    @media @tablet {
+    @media only screen and (max-width: 860px) {
         font-size: bkscale(@font__feature-strapline--font-size, 0.9);
         line-height: bkscale(@font__feature-strapline--line-height, 0.8);
     }
@@ -278,7 +278,7 @@
 // Feature Button
 // ---------------
 
-.feature__button { 
+.feature__button {
     margin: 10px 0 0 0;
     background-color: @color__feature-button--background;
     &:after {
@@ -290,7 +290,7 @@
     }
     &:hover {
         background-color: darken(@color__feature-button--background,10%);
-    } 
+    }
 }
 
 
@@ -324,6 +324,7 @@
     color: @color__h4--text;
     font-size: @font__h4--font-size;
     line-height: @font__h4--line-height;
+    margin-bottom: 6px;
     text-shadow: none;
 }
 
@@ -352,7 +353,7 @@
 .widget__gallery {
     // Gallery List
     .gallery-list {
-        .clearfix; 
+        .clearfix;
     }
     // Gallery Item
     .gallery-item {
@@ -468,7 +469,7 @@
     display: none;
     margin: 0;
     padding: 20px;
-    background-color: hsla(hue(@spare-color), saturation(@spare-color), lightness(@spare-color), 0.8); 
+    background-color: hsla(hue(@spare-color), saturation(@spare-color), lightness(@spare-color), 0.8);
 }
 
 // Show Caption
@@ -493,7 +494,7 @@
 
 // -----------------------------
 // 7.  #Slideshow
-// ----------------------------- 
+// -----------------------------
 
 // Slideshow Layout
 // ----------------
@@ -504,7 +505,7 @@
     min-height: 400px;
 }
 
-.responsiveslideshow__slideshow-controls, 
+.responsiveslideshow__slideshow-controls,
 .responsiveslideshow__caption {
     text-align: center;
     margin-top: 15px;
@@ -530,6 +531,7 @@
 // ------------------------
 
 .responsiveslideshow .caption {
+    background-color: @color__gallery-caption--background;
     position: absolute;
     bottom: 35px;
     width: 100%;
@@ -537,9 +539,14 @@
     @media @mobile {
         display:none;
     }
+
+    .item-caption,
+    .item-description {
+        color: @color__slideshow-title--text;
+    }
 }
 
-.responsiveslideshow__image-title, 
+.responsiveslideshow__image-title,
 .responsiveslideshow__image-description {
     display: block;
     padding: 0 10%;
@@ -586,7 +593,6 @@
     top: 0;
     bottom: 0;
     margin: 0px auto;
-    display: table;
     width: 110px;
 }
 
@@ -719,11 +725,11 @@
     color: @color__h1--text;
     font-weight: @font__h1--font-weight;
     font-family: @font__h1--font-family;
-} 
+}
 
 // Inputs
 input.input[type=email],
-input.input[type=search], 
+input.input[type=search],
 .contact-form__textarea {
     border: 0;
     background-color: @color-swatch1;
@@ -867,7 +873,7 @@ input.input[type=search],
     &:hover:before {
         color: @color-swatch4;
         .transitions
-    }   
+    }
 }
 
 // Header Social Icons Widget
@@ -936,6 +942,7 @@ input.input[type=search],
     a {
         font-weight: @font-swatch1-font-weight;
         text-decoration: none;
+        -ms-word-break: break-all;
     }
     p {
         padding-bottom:0;
@@ -1095,15 +1102,15 @@ input.input[type=search],
     .companyaddress__address-line {
         display: inline-block;
     }
-    .profile__message, 
-    .companyheadline__headline, 
+    .profile__message,
+    .companyheadline__headline,
     .message p,
     .twitter__tweet-content,
     .twitter__timestamp,
     .twitter__tweet-meta {
         color: @color__companyname--text;
     }
-} 
+}
 
 .header-content .widget--template-widget {
     display: inline-block;
@@ -1122,7 +1129,7 @@ input.input[type=search],
     }
 }
 
-.header-content .twitter__avatar { 
+.header-content .twitter__avatar {
     @media @mobile {
         text-align: center;
     }
@@ -1209,7 +1216,7 @@ input.input[type=search],
 
 .template-footer2 .signupform__input {
     display: inline-block;
-    float: left; 
+    float: left;
     width: 70%;
     padding: 13px!important;
 }
