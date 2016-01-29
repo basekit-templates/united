@@ -1141,11 +1141,7 @@ input.input[type=search],
 
 .template-footer1 .twitter__avatar {
     display: table;
-    margin: 0px auto 20px;
-    @media @mobile {
-        display: table;
-        margin: 0px auto 20px;
-    }
+    margin: 0px auto 10px;
 }
 
 .template-footer1 input[type="email"] {
@@ -1170,6 +1166,11 @@ input.input[type=search],
 
 .template-footer1 .signupform__form {
     padding: 0;
+    max-width: 50%;
+    margin: 0px auto;
+    @media @mobile {
+        max-width: 100%;
+    }
 }
 
 .template-footer1 p, .template-footer1 a {
@@ -1209,7 +1210,7 @@ input.input[type=search],
 }
 
 .template-footer2 .twitter__tweet-wrap {
-    max-width: 50%;
+    max-width: 100%;
 }
 
 .template-footer2 .signupform__input {
