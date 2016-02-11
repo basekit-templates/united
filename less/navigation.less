@@ -148,7 +148,7 @@
             width: 26px;
             height: 3px;
             top: 0;
-            left: 3%;
+            left: 4%;
             right: 0;
             margin-top: 15px;
             margin-left: -13px;
@@ -162,7 +162,7 @@
             width: 26px;
             height: 3px;
             top: 12px;
-            left: 3%;
+            left: 4%;
             right: 0;
             margin-top: 15px;
             margin-left: -13px;
@@ -202,7 +202,7 @@
                 width: 26px;
                 height: 3px;
                 top: 0;
-                left: 3%;
+                left: 4%;
                 right: 0;
                 margin-top: 21px;
                 margin-left: -13px;
@@ -227,5 +227,20 @@
     }
     .navigation-item {
         width: 100%;
+    }
+}
+
+@media @mobile {
+    .navigation-toggle {
+    	&:before, &:after {
+    		left: 2%;
+    	}
+    }
+    .open & {
+        &.navigation-toggle {
+            &:after {
+                left: 2%;
+            }
+        }
     }
 }
