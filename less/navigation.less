@@ -148,7 +148,7 @@
             width: 26px;
             height: 3px;
             top: 0;
-            left: 50%;
+            left: 3%;
             right: 0;
             margin-top: 15px;
             margin-left: -13px;
@@ -162,7 +162,7 @@
             width: 26px;
             height: 3px;
             top: 12px;
-            left: 50%;
+            left: 3%;
             right: 0;
             margin-top: 15px;
             margin-left: -13px;
@@ -184,10 +184,10 @@
     // Toggle Button Open State
     .open & {
         &.navigation-toggle {
-            background-color: @color-swatch1;
+            background-color: transparent;
             &:before {
                 margin-top: 21px;
-                background: @color-swatch3;
+                background: #ffffff;
                 box-shadow: none;
                 -webkit-transform: rotate(45deg);
                 -moz-transform: rotate(45deg);
@@ -202,11 +202,11 @@
                 width: 26px;
                 height: 3px;
                 top: 0;
-                left: 50%;
+                left: 3%;
                 right: 0;
                 margin-top: 21px;
                 margin-left: -13px;
-                background: @color-swatch3;
+                background: #ffffff;
                 box-shadow: none;
                 -webkit-transform: rotate(-45deg);
                 -moz-transform: rotate(-45deg);
@@ -222,7 +222,6 @@
         .open & {
             display: block;
             padding-top: 10px;
-            border-top: 1px solid darken(@color__body--background, 9%);
             text-align: center;
         }
     }
