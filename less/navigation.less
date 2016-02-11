@@ -162,7 +162,7 @@
             width: 26px;
             height: 3px;
             top: 12px;
-            left: 4%;
+            left: 2%;
             right: 0;
             margin-top: 15px;
             margin-left: -13px;
@@ -171,14 +171,14 @@
         }
     }
     .navigation-toggle:hover {
-        background-color: @color-swatch1;
+        background-color: transparent;
         border: 0;
             &:before {
                 background: #ffffff;
                 box-shadow: 0 6px 0 #ffffff;
             }
             &:after {
-                background: @color-swatch3;
+                background: #ffffff;
             }
     }
     // Toggle Button Open State
@@ -202,7 +202,7 @@
                 width: 26px;
                 height: 3px;
                 top: 0;
-                left: 4%;
+                left: 2%;
                 right: 0;
                 margin-top: 21px;
                 margin-left: -13px;
@@ -233,13 +233,13 @@
 @media @mobile {
     .navigation-toggle {
     	&:before, &:after {
-    		left: 2%;
+    		left: 4%;
     	}
     }
     .open & {
         &.navigation-toggle {
             &:after {
-                left: 2%;
+                left: 4%;
             }
         }
     }
