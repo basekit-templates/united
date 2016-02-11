@@ -230,4 +230,17 @@
     }
 }
 
-
+@media @mobile {
+    .navigation-toggle {
+    	&:before, &:after {
+    		left: 2%;
+    	}
+    }
+    .open & {
+        &.navigation-toggle {
+            &:after {
+                left: 2%;
+            }
+        }
+    }
+}
