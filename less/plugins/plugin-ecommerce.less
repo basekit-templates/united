@@ -70,12 +70,6 @@
     background: no-repeat;
 }
 
-.product-image .image-link {
-    max-height: 600px;
-    line-height: 100%;
-    height: 100%;
-}
-
 // Product Information
 .ecomproduct__form {
     border: 0;
@@ -116,9 +110,9 @@
     float: right;
     width: 52%;
     padding: 12px;
-    background-color: @color__button--background;
+    background-color: @color__button--background--hover;
     &:hover {
-        background-color: @color__button--background--hover;
+        background-color: @color__button--background;
     }
 }
 
@@ -194,7 +188,7 @@
 
 .ecomproductslist__product-item-price, 
 .ecomfeaturedproducts__product-item-price {
-    background-color: @color__secondary;
+    background-color: @color__button--background;
     padding: 5px 10px;
     display: inline-block;
     color: @color__button--text;
@@ -321,6 +315,22 @@
     @media @mobile {
         margin: 0px auto;
         display: table;
+    }
+}
+
+.ecombasketsummary__summary-section {
+    @media @mobile {
+        padding: 20px;
+    }
+}
+
+.message {
+    margin-bottom: 20px;
+    &:before {
+        position: relative;
+    }
+    @media @tablet {
+        padding-left: 0;
     }
 }
 
