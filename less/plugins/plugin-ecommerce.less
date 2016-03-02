@@ -186,7 +186,7 @@
     margin-bottom: 10px;
 }
 
-.ecomproductslist__product-item-price, 
+.ecomproductslist__product-item-price,
 .ecomfeaturedproducts__product-item-price {
     background-color: @color__button--background;
     padding: 5px 10px;
@@ -243,7 +243,7 @@
     }
 }
 // Hide button text
-.remove-text { 
+.remove-text {
     display: none;
 }
 
@@ -274,7 +274,7 @@
     background-image: none;
 }
 
-.ecombasketsummary__quantity-minus, 
+.ecombasketsummary__quantity-minus,
 .ecombasketsummary__quantity-plus {
     vertical-align: top;
 }
@@ -291,7 +291,7 @@
     @media @mobile {
         margin: 10px auto;
         max-width: 100px;
-    }   
+    }
 }
 
 .quantity-wrap .button--quantity {
@@ -342,26 +342,27 @@
 // -------------------------------
 
 .ecomproductslist__fieldset--filters {
-    float:left;
-    width: 60%;
+    order: 1;
+    .flex(1 0 60%);
+
     @media @tablet {
-        width:100%;
+        .flex(1 0 100%);
     }
 }
 
 .ecomproductslist__fieldset--search {
-    float: right;
-    width: 40%;
+    order: 2;
+    .flex(1 0 40%);
+
     @media @tablet {
-        float: initial;
-        width:100%;
+        .flex(1 0 100%);
     }
 }
 
 .ecomproductslist__form {
-    max-width: 100%;
+    .flex-display;
+    .flex-wrap(wrap);
     padding: 20px 20px 5px 20px;
-    .clearfix
 }
 
 .ecomproductslist__form-group {
@@ -389,7 +390,7 @@
     margin: 0;
 }
 
-.cell--header.ecombasketsummary__cell, 
+.cell--header.ecombasketsummary__cell,
 .ecombasketsummary__cell {
     @media @mobile {
             text-align: center;
@@ -420,10 +421,10 @@ select {
     margin: 10px 0;
 }
 
-.product-item-image, 
-.product-item-image .image-link, 
-.product-gallery .gallery-item, 
-.product-image .image-link, 
+.product-item-image,
+.product-item-image .image-link,
+.product-gallery .gallery-item,
+.product-image .image-link,
 .basket-item-image .image-link {
     background-color: transparent;
 }
