@@ -672,10 +672,16 @@
 //  --------------
 
 .clicktocall__phone-number-link {
-    color: @color__navigation--text;
+    color: @color__p--text;
     &:hover {
         text-decoration: none;
+    }
+    @media @mobile {
         background-color: transparent;
+        &:hover {
+            background-color: transparent;
+            color: @color__p--text;
+        }
     }
 }
 
