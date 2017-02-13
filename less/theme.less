@@ -13,8 +13,7 @@
 // 1. #Header & Footer
 // -----------------------------
 
-.template-header,
-.template-footer {
+.template-header {
 	.flex-vert-center; // Mixin > Flexbox: Vertical Align Center Mixin
 	min-height: 50px;
 	background-color: @color__header--background;
@@ -22,6 +21,12 @@
     @media @mobile {
         display: block;
     }
+}
+
+.template-footer {
+    .flex-vert-center; // Mixin > Flexbox: Vertical Align Center Mixin
+    min-height: 50px;
+    background-color: @color__footer--background;
 }
 
 .template-footer .widget__social-icons ul li {
