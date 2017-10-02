@@ -76,7 +76,7 @@
 	}
 }
 
-.navigation-list--children, 
+.navigation-list--children,
 .default-page .navigation-list--children {
 	background-color:@color-swatch3;
 	@media @tablet {
@@ -100,11 +100,11 @@
 }
 
 // Selected nav item
-.navigation-item.selected > .item-name { 
+.navigation-item.selected > .item-name {
 	color: @color__navigation--text--selected;
 }
 
-.extendednavigation li.selected a, 
+.extendednavigation li.selected a,
 .extendednavigation li.selected .text {
 	color: @color__navigation--text--selected;
 }
@@ -113,6 +113,18 @@
     display: none;
     @media @tablet {
         display: block;
+    }
+}
+
+[data-widget-type="extendednavigation"] .widget-overlay {
+    display: none;
+}
+
+[data-widget-type="extendednavigation"] .open + .widget-overlay {
+
+    @media @tablet {
+        display: block;
+        top: 65px;
     }
 }
 
@@ -136,7 +148,7 @@
 		.open & {
 			display: block;
 			margin-top: 10px;
-		} 
+		}
 	}
 }
 
