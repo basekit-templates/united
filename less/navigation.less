@@ -78,12 +78,12 @@
 
 .navigation-list--children,
 .default-page .navigation-list--children {
-	background-color:@color-swatch3;
+	background-color: @color__navigation-list--background;
 	@media @tablet {
 		border-top: none;
 		position: relative;
 		top: 0;
-		background-color: @color-swatch3;
+		background-color: @color__navigation-list--background;
 		.navigation-item:hover & {
 			display: none;
 		}
@@ -188,8 +188,8 @@
             right: 0;
             margin-top: 15px;
             margin-left: 0;
-            background: #ffffff;
-            box-shadow: 0 6px 0 #ffffff;
+            background: @color__navigation--text;
+            box-shadow: 0 6px 0 @color__navigation--text;
             .transition( all, 0.5s, ease );
         }
         &:after {
@@ -202,7 +202,7 @@
             right: 0;
             margin-top: 15px;
             margin-left: 0;
-            background: #ffffff;
+            background: @color__navigation--text;
             .transition( all, 0.5s, ease );
         }
     }
@@ -210,11 +210,11 @@
         background-color: transparent;
         border: 0;
             &:before {
-                background: #ffffff;
-                box-shadow: 0 6px 0 #ffffff;
+                background: @color__navigation--text;
+                box-shadow: 0 6px 0 @color__navigation--text;
             }
             &:after {
-                background: #ffffff;
+                background: @color__navigation--text;
             }
     }
     // Toggle Button Open State
@@ -223,7 +223,7 @@
             background-color: transparent;
             &:before {
                 margin-top: 21px;
-                background: #ffffff;
+                background: @color__navigation--text;
                 box-shadow: none;
                 -webkit-transform: rotate(45deg);
                 -moz-transform: rotate(45deg);
@@ -242,7 +242,7 @@
                 right: 0;
                 margin-top: 21px;
                 margin-left: 0;
-                background: #ffffff;
+                background: @color__navigation--text;
                 box-shadow: none;
                 -webkit-transform: rotate(-45deg);
                 -moz-transform: rotate(-45deg);
