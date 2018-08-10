@@ -199,7 +199,8 @@ blockquote:before {
 }
 
 // Form Body
-.form-body {
+.form-body,
+.signupform__form-group--terms {
 	margin: 0 30px 20px;
 	@media @mobile {
 		margin: 10px 20px 20px 20px;
@@ -268,8 +269,12 @@ label {
 	display:none;
 }
 
-.advancedcontactform__form-group--terms label {
-	.flex-display;
+.advancedcontactform__form-group--terms,
+.contactform__form-group--terms,
+.signupform__form-group--terms {
+	label {
+		.flex-display;
+	}
 }
 
 // Select
